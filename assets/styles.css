@@ -4,21 +4,24 @@
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/atkinson-hyperlegible-next-latin-300-normal.woff2') format('woff2');
+  src: url('fonts/atkinson-hyperlegible-next-latin-300-normal.woff2')
+    format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/atkinson-hyperlegible-next-latin-300-italic.woff2') format('woff2');
+  src: url('fonts/atkinson-hyperlegible-next-latin-300-italic.woff2')
+    format('woff2');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/atkinson-hyperlegible-next-latin-400-normal.woff2') format('woff2');
+  src: url('fonts/atkinson-hyperlegible-next-latin-400-normal.woff2')
+    format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -50,7 +53,8 @@
 
   --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
   --font-body:
-    'Atkinson Hyperlegible Next', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    'Atkinson Hyperlegible Next', 'Segoe UI', system-ui, -apple-system,
+    sans-serif;
   --font-mono:
     ui-monospace, 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace;
 
@@ -59,6 +63,9 @@
   --step-1: 1.25rem;
   --step-2: 1.6rem;
   --step-3: clamp(2rem, 1.4rem + 2.6vw, 3.1rem);
+
+  --text-shadow: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
+  --text-tracking: 1px;
 
   --radius: 6px;
   --measure: 66ch;
@@ -143,6 +150,7 @@ h3 {
   line-height: 1.15;
   text-wrap: balance;
   margin: 0;
+  filter: var(--text-shadow);
 }
 h1 {
   font-size: var(--step-3);
@@ -159,6 +167,8 @@ h3 {
 }
 p {
   margin: 0;
+  filter: var(--text-shadow);
+  letter-spacing: var(--text-tracking);
 }
 
 .wrap {
@@ -550,6 +560,7 @@ main section.letter {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--muted);
+  letter-spacing: 1px;
 }
 
 /* PHP alert */
@@ -620,15 +631,14 @@ main section.letter {
 }
 .tier {
   border-top: 4px solid var(--line);
+  border-top-color: var(--accent);
   padding-top: 1rem;
   display: grid;
   gap: 0.7rem;
   align-content: start;
   min-width: 0;
 }
-.tier:nth-child(2) {
-  border-top-color: var(--accent);
-}
+
 .tier .claim {
   font-style: italic;
   color: var(--muted);

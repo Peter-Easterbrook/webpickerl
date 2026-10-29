@@ -1,0 +1,13 @@
+{
+  "name": "Webpickerl",
+  "short_name": "Webpickerl",
+  "lang": "de-AT",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f4f6f7",
+  "theme_color": "#00274e",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,332 +1,675 @@
 <!doctype html>
 <html lang="de-AT">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Webpickerl</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Webpickerl: kostenloser Website-Check für Betriebe in Österreich: Datenschutz, Impressum, Sicherheit, Barrierefreiheit, Tempo und Auffindbarkeit. Schriftlicher Befund, unverbindlich.">
-<meta name="color-scheme" content="light dark">
-<link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Webpickerl</title>
+    <meta name="claude:viewport-fit-sides" content="cover" />
+    <meta
+      name="description"
+      content="Webpickerl: kostenloser Website-Check für Betriebe in Österreich: Datenschutz, Impressum, Sicherheit, Barrierefreiheit, Tempo und Auffindbarkeit. Schriftlicher Befund, unverbindlich."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="preload"
+      href="assets/fonts/atkinson-hyperlegible-next-latin-300-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/bricolage-grotesque-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <body>
+    <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
-<!-- ENTWURF: diesen Hinweis vor dem Livegang entfernen -->
-<div class="draft" role="note"><div class="wrap">Entwurf: Angaben in <span class="ph">[eckigen Klammern]</span> sind Platzhalter. Rechtstexte vor der Veröffentlichung von einer Rechtsanwältin, einem Rechtsanwalt oder dem WKO-Rechtsservice prüfen lassen.</div></div>
-
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Webpickerl</a>
-    <nav class="site-nav" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="#pruefung">Was wir prüfen</a></li>
-        <li><a href="#ablauf">Ablauf</a></li>
-        <li><a href="#pakete">Pakete</a></li>
-        <li><a href="#anfordern">Check anfordern</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main id="inhalt">
-
-  <section class="hero" aria-labelledby="h-hero">
-    <div class="wrap">
-      <div class="hero-text">
-        <p class="eyebrow">Webpickerl · der kostenlose Website-Check</p>
-        <h1 id="h-hero">Ist Ihre Website rechtlich und technisch fit für 2026?</h1>
-        <p class="lead">Wir prüfen Ihre Website kostenlos auf Datenschutz, Impressum, Sicherheit, Barrierefreiheit, Tempo und Auffindbarkeit. Sie bekommen einen schriftlichen Befund mit Ampel-Bewertung und klaren nächsten Schritten.</p>
-        <div class="hero-actions">
-          <a class="btn" href="#anfordern">Kostenlosen Check anfordern</a>
-          <a class="btn btn-ghost" href="#pruefung">Was wir prüfen</a>
-        </div>
-        <ul class="hero-facts">
-          <li>Kostenlos und unverbindlich</li>
-          <li>Keine Zugangsdaten nötig: wir prüfen nur öffentlich sichtbare Seiten</li>
-          <li>Befund innerhalb von <span class="ph">[5]</span> Werktagen</li>
-        </ul>
+    <!-- ENTWURF: diesen Hinweis vor dem Livegang entfernen -->
+    <div class="draft" role="note">
+      <div class="wrap">
+        Entwurf: Angaben in <span class="ph">[eckigen Klammern]</span> sind
+        Platzhalter. Rechtstexte vor der Veröffentlichung von einer
+        Rechtsanwältin, einem Rechtsanwalt oder dem WKO-Rechtsservice prüfen
+        lassen.
       </div>
+    </div>
 
-      <figure class="report" aria-labelledby="h-report">
-        <div class="report-head">
-          <span class="tag">Beispiel</span>
-          <h2 id="h-report" class="url">www.beispiel-tischlerei.at</h2>
-          <span class="date">So sieht ein Ausschnitt aus dem Befund aus</span>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark" aria-hidden="true"
+            ><i></i><i></i><i></i></span
+          >Webpickerl</a
+        >
+        <nav class="site-nav" aria-label="Hauptnavigation">
+          <ul>
+            <li><a href="#pruefung">Was wir prüfen</a></li>
+            <li><a href="#ablauf">Ablauf</a></li>
+            <li><a href="#pakete">Pakete</a></li>
+            <li><a href="#anfordern">Check anfordern</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="inhalt">
+      <section class="hero" aria-labelledby="h-hero">
+        <div class="wrap">
+          <div class="hero-text">
+            <p class="eyebrow">Webpickerl · der kostenlose Website-Check</p>
+            <h1 id="h-hero">
+              Ist Ihre Website rechtlich und technisch fit für 2026?
+            </h1>
+            <p class="lead">
+              Wir prüfen Ihre Website kostenlos auf Datenschutz, Impressum,
+              Sicherheit, Barrierefreiheit, Tempo und Auffindbarkeit. Sie
+              bekommen einen schriftlichen Befund mit Ampel-Bewertung und klaren
+              nächsten Schritten.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#anfordern">Kostenlosen Check anfordern</a>
+              <a class="btn btn-ghost" href="#pruefung">Was wir prüfen</a>
+            </div>
+            <ul class="hero-facts">
+              <li>Kostenlos und unverbindlich</li>
+              <li>
+                Keine Zugangsdaten nötig: wir prüfen nur öffentlich sichtbare
+                Seiten
+              </li>
+              <li>
+                Befund innerhalb von <span class="ph">[5]</span> Werktagen
+              </li>
+            </ul>
+          </div>
+
+          <figure class="report" aria-labelledby="h-report">
+            <div class="report-head">
+              <span class="tag">Beispiel</span>
+              <h2 id="h-report" class="url">www.beispiel-tischlerei.at</h2>
+              <span class="date"
+                >So sieht ein Ausschnitt aus dem Befund aus</span
+              >
+            </div>
+            <ul>
+              <li>
+                <span class="dot bad" aria-hidden="true"></span
+                ><span class="area"
+                  >Datenschutzerklärung<span class="finding"
+                    >Stand 2016, vor der DSGVO</span
+                  ></span
+                ><span class="verdict bad">Handeln</span>
+              </li>
+              <li>
+                <span class="dot bad" aria-hidden="true"></span
+                ><span class="area"
+                  >Cookies und Tracking<span class="finding"
+                    >Statistik läuft vor der Einwilligung</span
+                  ></span
+                ><span class="verdict bad">Handeln</span>
+              </li>
+              <li>
+                <span class="dot bad" aria-hidden="true"></span
+                ><span class="area"
+                  >Google Fonts<span class="finding"
+                    >direkt von Google-Servern geladen</span
+                  ></span
+                ><span class="verdict bad">Handeln</span>
+              </li>
+              <li>
+                <span class="dot bad" aria-hidden="true"></span
+                ><span class="area"
+                  >PHP-Version<span class="finding"
+                    >PHP 7.2, ohne Sicherheitsupdates</span
+                  ></span
+                ><span class="verdict bad">Handeln</span>
+              </li>
+              <li>
+                <span class="dot warn" aria-hidden="true"></span
+                ><span class="area"
+                  >Impressum<span class="finding"
+                    >UID-Nummer und Gewerbebehörde fehlen</span
+                  ></span
+                ><span class="verdict warn">Verbessern</span>
+              </li>
+              <li>
+                <span class="dot warn" aria-hidden="true"></span
+                ><span class="area"
+                  >Mobil und Tempo<span class="finding"
+                    >LCP 4,1 s am Handy (Ziel: unter 2,5 s)</span
+                  ></span
+                ><span class="verdict warn">Verbessern</span>
+              </li>
+              <li>
+                <span class="dot warn" aria-hidden="true"></span
+                ><span class="area"
+                  >Barrierefreiheit<span class="finding"
+                    >23 Bilder ohne Alternativtext</span
+                  ></span
+                ><span class="verdict warn">Verbessern</span>
+              </li>
+              <li>
+                <span class="dot ok" aria-hidden="true"></span
+                ><span class="area"
+                  >Verschlüsselung<span class="finding"
+                    >HTTPS aktiv, Zertifikat gültig</span
+                  ></span
+                ><span class="verdict ok">In Ordnung</span>
+              </li>
+            </ul>
+            <figcaption class="report-foot">
+              Erfundenes Beispiel zur Veranschaulichung. Ihr Befund bezieht sich
+              auf Ihre eigene Website.
+            </figcaption>
+          </figure>
         </div>
+      </section>
+
+      <section class="letter" aria-labelledby="h-letter">
+        <div class="wrap">
+          <div>
+            <h2 id="h-letter" class="letter-title">
+              Sie haben Post von uns bekommen?
+            </h2>
+            <p>
+              Ihr persönlicher Bericht wartet schon. Geben Sie den Code aus dem
+              Brief ein, oder scannen Sie einfach den QR-Code im Brief.
+            </p>
+          </div>
+          <form class="code-form" method="get" action="bericht.php">
+            <label for="c-code">Code aus dem Brief</label>
+            <div class="code-row">
+              <input
+                type="text"
+                id="c-code"
+                name="code"
+                placeholder="z. B. K7QM-4XTB"
+                autocomplete="off"
+                autocapitalize="characters"
+                spellcheck="false"
+                required
+              />
+              <button class="btn" type="submit">Bericht öffnen</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="pruefung" aria-labelledby="h-pruefung">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Was wir prüfen</p>
+            <h2 id="h-pruefung">
+              Sechs Bereiche, in denen ältere Websites heute oft Lücken haben
+            </h2>
+            <p class="lead">
+              Viele Websites aus den Jahren 2006 bis 2016 sehen noch gut aus,
+              erfüllen aber Regeln nicht, die inzwischen gelten. Wir sehen nach,
+              wo Ihre Website steht.
+            </p>
+          </div>
+          <ul class="areas">
+            <li>
+              <h3>Datenschutz und Cookies</h3>
+              <p>
+                Passt die Datenschutzerklärung zu dem, was Ihre Website
+                tatsächlich tut? Laden Statistik, Karten, Videos oder Schriften
+                schon, bevor jemand zustimmt?
+              </p>
+              <p class="basis">DSGVO Art. 13 · TKG 2021 § 165</p>
+            </li>
+            <li>
+              <h3>Impressum und Offenlegung</h3>
+              <p>
+                Sind Firmenbuch, UID-Nummer, Kammer, Gewerbebehörde und
+                Offenlegung vollständig und aktuell? Steht noch der Link zur
+                eingestellten EU-Streitschlichtungsplattform drin?
+              </p>
+              <p class="basis">ECG § 5 · UGB § 14 · MedienG § 25</p>
+            </li>
+            <li>
+              <h3>Sicherheit</h3>
+              <p>
+                HTTPS, Sicherheits-Header und, wo erkennbar, veraltete Software
+                wie alte PHP- oder CMS-Versionen.
+              </p>
+              <p class="basis">DSGVO Art. 32</p>
+            </li>
+            <li>
+              <h3>Barrierefreiheit</h3>
+              <p>
+                Alternativtexte, Kontraste, Tastaturbedienung und
+                Formularbeschriftungen. Für viele Online-Shops ist das seit Juni
+                2025 Pflicht.
+              </p>
+              <p class="basis">BaFG · WCAG 2.1 AA · EN 301 549</p>
+            </li>
+            <li>
+              <h3>Mobil und Tempo</h3>
+              <p>
+                Wie schnell lädt Ihre Seite am Handy, und lässt sie sich dort
+                gut bedienen? Google bewertet nur noch die mobile Version.
+              </p>
+              <p class="basis">
+                Core Web Vitals: LCP ≤ 2,5 s · INP ≤ 200 ms · CLS ≤ 0,1
+              </p>
+            </li>
+            <li>
+              <h3>Auffindbarkeit</h3>
+              <p>
+                Seitentitel, Beschreibungen, strukturierte Daten und Ihr
+                Google-Unternehmensprofil: finden Kundinnen und Kunden in Ihrer
+                Region Sie?
+              </p>
+              <p class="basis">Google- und Bing-Richtlinien</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-php">
+        <div class="wrap alert">
+          <div class="section-head">
+            <p class="eyebrow">Aktuell</p>
+            <h2 id="h-php">Kritische PHP-Lücke „PHP2Shell“</h2>
+            <p class="cve">CVE-2026-109618 · CVE-2026-109619</p>
+            <p>
+              Am 21. Oktober 2026 wurden zwei kritische Schwachstellen in PHP
+              bekannt gemacht. PHP läuft unter den meisten älteren Websites,
+              etwa mit WordPress, Joomla, Typo3 oder Drupal. Angreifer können
+              über eine einfache Anfrage Code auf dem Server ausführen, ganz
+              ohne Login.
+            </p>
+            <p>
+              Wo die PHP-Version von außen erkennbar ist, sagen wir Ihnen im
+              Befund, ob Handlungsbedarf besteht.
+            </p>
+          </div>
+          <dl>
+            <dt>Abgesichert</dt>
+            <dd>PHP 8.5.12, 8.4.27, 8.3.36 und 8.2.35</dd>
+            <dt>PHP 7.4 bis 8.1</dt>
+            <dd>
+              nur über nachträgliche Korrekturen, die viele Hoster nicht
+              anbieten
+            </dd>
+            <dt>PHP 7.3 und älter</dt>
+            <dd>meist kein Fix verfügbar, Upgrade nötig</dd>
+            <dt>31.12.2026</dt>
+            <dd>Ende der Sicherheitsupdates für PHP 8.2</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section id="ablauf" aria-labelledby="h-ablauf">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Ablauf</p>
+            <h2 id="h-ablauf">So läuft der Check</h2>
+          </div>
+          <ol class="steps">
+            <li>
+              <h3>Anfordern</h3>
+              <p>
+                Sie schicken uns die Adresse Ihrer Website über das Formular
+                unten.
+              </p>
+            </li>
+            <li>
+              <h3>Prüfen</h3>
+              <p>
+                Wir sehen uns die öffentlich sichtbaren Seiten an, mit
+                Prüfwerkzeugen und von Hand. Keine Logins, keine Angriffe, keine
+                Last auf Ihrem Server.
+              </p>
+            </li>
+            <li>
+              <h3>Befund</h3>
+              <p>
+                Sie bekommen innerhalb von <span class="ph">[5]</span> Werktagen
+                einen kurzen schriftlichen Befund per E-Mail, mit
+                Ampel-Bewertung je Bereich.
+              </p>
+            </li>
+            <li>
+              <h3>Entscheiden</h3>
+              <p>
+                Wenn Sie möchten, besprechen wir den Befund in einem kurzen
+                Gespräch. Wenn nicht, ist der Check damit abgeschlossen.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="pakete" aria-labelledby="h-pakete">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Wenn Sie danach handeln möchten</p>
+            <h2 id="h-pakete">Drei Pakete, die aufeinander aufbauen</h2>
+            <p class="lead">
+              Jedes Paket enthält alles aus dem vorigen. Ihre Inhalte, Ihre
+              Domain und Ihr Erscheinungsbild bleiben erhalten. Der Befund
+              zeigt, welches Paket zu Ihrer Website passt.
+            </p>
+          </div>
+          <div class="tiers">
+            <article class="tier" aria-labelledby="h-t1">
+              <h3 id="h-t1">Essentials</h3>
+              <p class="claim">Rechtssicher und sicher</p>
+              <p class="for">
+                Für kleine Websites, die gut funktionieren und rechtlich
+                abgesichert sein sollen.
+              </p>
+              <ul>
+                <li>Datenschutzerklärung passend zur Website</li>
+                <li>Cookie-Einwilligung, Schriften lokal eingebunden</li>
+                <li>Impressum und Offenlegung korrigiert</li>
+                <li>HTTPS, PHP-Prüfung und Absicherung gegen PHP2Shell</li>
+                <li>Funktionierende Datensicherung</li>
+              </ul>
+              <p class="price">
+                Richtpreis <span class="ph">[€ 900 bis 1.900]</span>, einmalig
+              </p>
+            </article>
+            <article class="tier" aria-labelledby="h-t2">
+              <h3 id="h-t2">Professional</h3>
+              <p class="claim">Schnell, mobil, gefunden</p>
+              <p class="for">
+                Für Betriebe, die über ihre Website Kundschaft gewinnen.
+              </p>
+              <ul>
+                <li>Alles aus Essentials</li>
+                <li>Volle Handy-Tauglichkeit auf Basis Ihres Designs</li>
+                <li>Ladezeiten im grünen Bereich der Core Web Vitals</li>
+                <li>Suchmaschinen-Grundlagen und Google-Unternehmensprofil</li>
+                <li>Barrierefreiheit: die wichtigsten Verbesserungen</li>
+                <li>Umstieg auf PHP 8.3 oder neuer</li>
+              </ul>
+              <p class="price">
+                Richtpreis <span class="ph">[€ 2.900 bis 5.900]</span>, einmalig
+              </p>
+            </article>
+            <article class="tier" aria-labelledby="h-t3">
+              <h3 id="h-t3">Complete</h3>
+              <p class="claim">Fit für 2030</p>
+              <p class="for">
+                Für Shops nach dem Barrierefreiheitsgesetz und Websites auf
+                einem veralteten CMS.
+              </p>
+              <ul>
+                <li>Alles aus Professional</li>
+                <li>Umzug auf ein aktuelles System, ohne Ranking-Verlust</li>
+                <li>Volle Prüfung nach WCAG 2.1 AA mit Behebung</li>
+                <li>Auffrischung des Designs im bestehenden Markenbild</li>
+                <li>Inhalte vorbereitet für KI-Suchantworten</li>
+              </ul>
+              <p class="price">
+                Richtpreis <span class="ph">[€ 6.900 bis 14.900]</span>,
+                einmalig
+              </p>
+            </article>
+          </div>
+          <p class="note">
+            Alle Preise zuzüglich <span class="ph">[20 % USt.]</span>. Das
+            konkrete Angebot richtet sich nach dem Befund. Laufende Betreuung
+            ist als monatlicher Wartungsvertrag möglich.
+          </p>
+        </div>
+      </section>
+
+      <section id="anfordern" aria-labelledby="h-anfordern">
+        <div class="wrap form-wrap">
+          <div class="form-intro">
+            <p class="eyebrow">Kostenloser Check</p>
+            <h2 id="h-anfordern">Check anfordern</h2>
+            <p>
+              Wir brauchen nur die Adresse Ihrer Website und eine E-Mail-Adresse
+              für den Befund. Alles andere ist freiwillig.
+            </p>
+            <p class="legal-small">
+              Wir verwenden Ihre Angaben nur, um den Check durchzuführen und
+              Ihnen den Befund zu schicken. Werbung per E-Mail bekommen Sie nur,
+              wenn Sie das unten ausdrücklich ankreuzen. Details in der
+              <a href="datenschutz.html">Datenschutzerklärung</a>.
+            </p>
+          </div>
+
+          <form
+            class="check"
+            id="check-form"
+            action="anfrage.php"
+            method="post"
+            novalidate
+          >
+            <input type="hidden" name="typ" value="check" />
+            <div class="row">
+              <div class="field">
+                <label for="f-name">Ihr Name</label>
+                <input
+                  type="text"
+                  id="f-name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  aria-describedby="e-name"
+                />
+                <p class="error" id="e-name" hidden>
+                  Bitte geben Sie Ihren Namen an.
+                </p>
+              </div>
+              <div class="field">
+                <label for="f-firma"
+                  >Betrieb <span class="opt">(freiwillig)</span></label
+                >
+                <input
+                  type="text"
+                  id="f-firma"
+                  name="firma"
+                  autocomplete="organization"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-email">E-Mail-Adresse für den Befund</label>
+              <input
+                type="email"
+                id="f-email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-describedby="e-email"
+              />
+              <p class="error" id="e-email" hidden>
+                Bitte geben Sie eine gültige E-Mail-Adresse an, zum Beispiel
+                name@betrieb.at.
+              </p>
+            </div>
+            <div class="field">
+              <label for="f-url">Adresse Ihrer Website</label>
+              <input
+                type="text"
+                id="f-url"
+                name="website"
+                inputmode="url"
+                autocomplete="url"
+                placeholder="www.ihr-betrieb.at"
+                required
+                aria-describedby="e-url"
+              />
+              <p class="error" id="e-url" hidden>
+                Bitte geben Sie die Adresse Ihrer Website an, zum Beispiel
+                www.ihr-betrieb.at.
+              </p>
+            </div>
+            <div class="field">
+              <label for="f-tel"
+                >Telefon <span class="opt">(freiwillig)</span></label
+              >
+              <input type="tel" id="f-tel" name="telefon" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="f-msg"
+                >Gibt es etwas, worauf wir besonders achten sollen?
+                <span class="opt">(freiwillig)</span></label
+              >
+              <textarea id="f-msg" name="nachricht" rows="3"></textarea>
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="f-hp">Bitte dieses Feld leer lassen</label>
+              <input
+                type="text"
+                id="f-hp"
+                name="firma_url"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <fieldset>
+              <legend class="sr-legend">Bestätigung und Einwilligung</legend>
+              <div class="check-item">
+                <input
+                  type="checkbox"
+                  id="f-berechtigt"
+                  name="berechtigt"
+                  value="ja"
+                  required
+                  aria-describedby="e-berechtigt"
+                />
+                <label for="f-berechtigt"
+                  >Ich fordere den Check für meine eigene Website oder im
+                  Auftrag des Betriebs an, dem sie gehört.</label
+                >
+              </div>
+              <p class="error" id="e-berechtigt" hidden>
+                Bitte bestätigen Sie, dass Sie den Check für diese Website
+                anfordern dürfen.
+              </p>
+              <div class="check-item">
+                <input
+                  type="checkbox"
+                  id="f-optin"
+                  name="email_einwilligung"
+                  value="ja"
+                  aria-describedby="h-optin"
+                />
+                <label for="f-optin"
+                  ><span class="opt">(freiwillig)</span> Ja, ich möchte auch
+                  später Informationen zu Website-Themen und Angeboten von
+                  Webpickerl per E-Mail bekommen.</label
+                >
+              </div>
+              <p class="hint" id="h-optin">
+                Sie bekommen dazu eine E-Mail mit einem Bestätigungslink. Erst
+                nach dem Klick darauf schreiben wir Ihnen. Sie können die
+                Einwilligung jederzeit mit einem Klick in jeder E-Mail oder
+                formlos an office@webpickerl.at widerrufen. Für den Check selbst
+                ist das nicht nötig.
+              </p>
+            </fieldset>
+
+            <div>
+              <button class="btn" type="submit">
+                Kostenlosen Check anfordern
+              </button>
+            </div>
+            <p
+              class="form-status"
+              id="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-faq">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Häufige Fragen</p>
+            <h2 id="h-faq">Was Sie vielleicht wissen möchten</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Kostet der Check wirklich nichts?</summary>
+              <p>
+                Ja. Der Check und der Befund sind kostenlos und verpflichten Sie
+                zu nichts. Wir bieten ihn an, weil viele Betriebe erst durch den
+                Befund sehen, was an ihrer Website zu tun ist.
+              </p>
+            </details>
+            <details>
+              <summary>Brauchen Sie Zugangsdaten zu meiner Website?</summary>
+              <p>
+                Nein. Wir prüfen nur, was jede Besucherin und jeder Besucher
+                sehen kann. Wir melden uns nirgends an und testen keine
+                Angriffe. Manche Punkte, etwa die genaue Software-Version,
+                lassen sich von außen nicht immer erkennen. Das steht dann im
+                Befund.
+              </p>
+            </details>
+            <details>
+              <summary>Ist der Befund eine Rechtsberatung?</summary>
+              <p>
+                Nein. Wir sind
+                <span class="ph"
+                  >[Webentwickler, keine Rechtsanwaltskanzlei]</span
+                >. Der Befund zeigt technische und formale Lücken auf. Ob und
+                wie Sie rechtlich handeln müssen, klären Sie bitte mit Ihrer
+                Rechtsberatung oder dem Rechtsservice der Wirtschaftskammer.
+              </p>
+            </details>
+            <details>
+              <summary>Bekomme ich danach Werbung?</summary>
+              <p>
+                Nur, wenn Sie das im Formular ankreuzen und danach den Link in
+                unserer Bestätigungs-E-Mail anklicken. Ohne diese Einwilligung
+                schicken wir Ihnen nur den Befund und beantworten Ihre
+                Rückfragen.
+              </p>
+            </details>
+            <details>
+              <summary>Was passiert mit meinen Daten?</summary>
+              <p>
+                Wir speichern Ihre Angaben, um den Check durchzuführen, und
+                löschen sie <span class="ph">[6 Monate]</span> nach dem Versand
+                des Befunds, wenn daraus kein Auftrag entsteht. Diese Seite
+                setzt keine Cookies, verwendet keine Statistik-Werkzeuge und
+                lädt nichts von fremden Servern.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          © 2026 Webpickerl · Diese Seite setzt keine Cookies und lädt keine
+          Inhalte von Drittanbietern.
+        </p>
         <ul>
-          <li><span class="dot bad" aria-hidden="true"></span><span class="area">Datenschutzerklärung<span class="finding">Stand 2016, vor der DSGVO</span></span><span class="verdict bad">Handeln</span></li>
-          <li><span class="dot bad" aria-hidden="true"></span><span class="area">Cookies und Tracking<span class="finding">Statistik läuft vor der Einwilligung</span></span><span class="verdict bad">Handeln</span></li>
-          <li><span class="dot bad" aria-hidden="true"></span><span class="area">Google Fonts<span class="finding">direkt von Google-Servern geladen</span></span><span class="verdict bad">Handeln</span></li>
-          <li><span class="dot bad" aria-hidden="true"></span><span class="area">PHP-Version<span class="finding">PHP 7.2, ohne Sicherheitsupdates</span></span><span class="verdict bad">Handeln</span></li>
-          <li><span class="dot warn" aria-hidden="true"></span><span class="area">Impressum<span class="finding">UID-Nummer und Gewerbebehörde fehlen</span></span><span class="verdict warn">Verbessern</span></li>
-          <li><span class="dot warn" aria-hidden="true"></span><span class="area">Mobil und Tempo<span class="finding">LCP 4,1 s am Handy (Ziel: unter 2,5 s)</span></span><span class="verdict warn">Verbessern</span></li>
-          <li><span class="dot warn" aria-hidden="true"></span><span class="area">Barrierefreiheit<span class="finding">23 Bilder ohne Alternativtext</span></span><span class="verdict warn">Verbessern</span></li>
-          <li><span class="dot ok" aria-hidden="true"></span><span class="area">Verschlüsselung<span class="finding">HTTPS aktiv, Zertifikat gültig</span></span><span class="verdict ok">In Ordnung</span></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
         </ul>
-        <figcaption class="report-foot">Erfundenes Beispiel zur Veranschaulichung. Ihr Befund bezieht sich auf Ihre eigene Website.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="letter" aria-labelledby="h-letter">
-    <div class="wrap">
-      <div>
-        <h2 id="h-letter" class="letter-title">Sie haben Post von uns bekommen?</h2>
-        <p>Ihr persönlicher Bericht wartet schon. Geben Sie den Code aus dem Brief ein, oder scannen Sie einfach den QR-Code im Brief.</p>
       </div>
-      <form class="code-form" method="get" action="bericht.php">
-        <label for="c-code">Code aus dem Brief</label>
-        <div class="code-row">
-          <input type="text" id="c-code" name="code" placeholder="z. B. K7QM-4XTB" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
-          <button class="btn" type="submit">Bericht öffnen</button>
-        </div>
-      </form>
-    </div>
-  </section>
+    </footer>
 
-  <section id="pruefung" aria-labelledby="h-pruefung">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Was wir prüfen</p>
-        <h2 id="h-pruefung">Sechs Bereiche, in denen ältere Websites heute oft Lücken haben</h2>
-        <p class="lead">Viele Websites aus den Jahren 2006 bis 2016 sehen noch gut aus, erfüllen aber Regeln nicht, die inzwischen gelten. Wir sehen nach, wo Ihre Website steht.</p>
-      </div>
-      <ul class="areas">
-        <li>
-          <h3>Datenschutz und Cookies</h3>
-          <p>Passt die Datenschutzerklärung zu dem, was Ihre Website tatsächlich tut? Laden Statistik, Karten, Videos oder Schriften schon, bevor jemand zustimmt?</p>
-          <p class="basis">DSGVO Art. 13 · TKG 2021 § 165</p>
-        </li>
-        <li>
-          <h3>Impressum und Offenlegung</h3>
-          <p>Sind Firmenbuch, UID-Nummer, Kammer, Gewerbebehörde und Offenlegung vollständig und aktuell? Steht noch der Link zur eingestellten EU-Streitschlichtungsplattform drin?</p>
-          <p class="basis">ECG § 5 · UGB § 14 · MedienG § 25</p>
-        </li>
-        <li>
-          <h3>Sicherheit</h3>
-          <p>HTTPS, Sicherheits-Header und, wo erkennbar, veraltete Software wie alte PHP- oder CMS-Versionen.</p>
-          <p class="basis">DSGVO Art. 32</p>
-        </li>
-        <li>
-          <h3>Barrierefreiheit</h3>
-          <p>Alternativtexte, Kontraste, Tastaturbedienung und Formularbeschriftungen. Für viele Online-Shops ist das seit Juni 2025 Pflicht.</p>
-          <p class="basis">BaFG · WCAG 2.1 AA · EN 301 549</p>
-        </li>
-        <li>
-          <h3>Mobil und Tempo</h3>
-          <p>Wie schnell lädt Ihre Seite am Handy, und lässt sie sich dort gut bedienen? Google bewertet nur noch die mobile Version.</p>
-          <p class="basis">Core Web Vitals: LCP ≤ 2,5 s · INP ≤ 200 ms · CLS ≤ 0,1</p>
-        </li>
-        <li>
-          <h3>Auffindbarkeit</h3>
-          <p>Seitentitel, Beschreibungen, strukturierte Daten und Ihr Google-Unternehmensprofil: finden Kundinnen und Kunden in Ihrer Region Sie?</p>
-          <p class="basis">Google- und Bing-Richtlinien</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section aria-labelledby="h-php">
-    <div class="wrap alert">
-      <div class="section-head">
-        <p class="eyebrow">Aktuell</p>
-        <h2 id="h-php">Kritische PHP-Lücke „PHP2Shell“</h2>
-        <p class="cve">CVE-2026-109618 · CVE-2026-109619</p>
-        <p>Am 21. Oktober 2026 wurden zwei kritische Schwachstellen in PHP bekannt gemacht. PHP läuft unter den meisten älteren Websites, etwa mit WordPress, Joomla, Typo3 oder Drupal. Angreifer können über eine einfache Anfrage Code auf dem Server ausführen, ganz ohne Login.</p>
-        <p>Wo die PHP-Version von außen erkennbar ist, sagen wir Ihnen im Befund, ob Handlungsbedarf besteht.</p>
-      </div>
-      <dl>
-        <dt>Abgesichert</dt><dd>PHP 8.5.12, 8.4.27, 8.3.36 und 8.2.35</dd>
-        <dt>PHP 7.4 bis 8.1</dt><dd>nur über nachträgliche Korrekturen, die viele Hoster nicht anbieten</dd>
-        <dt>PHP 7.3 und älter</dt><dd>meist kein Fix verfügbar, Upgrade nötig</dd>
-        <dt>31.12.2026</dt><dd>Ende der Sicherheitsupdates für PHP 8.2</dd>
-      </dl>
-    </div>
-  </section>
-
-  <section id="ablauf" aria-labelledby="h-ablauf">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Ablauf</p>
-        <h2 id="h-ablauf">So läuft der Check</h2>
-      </div>
-      <ol class="steps">
-        <li><h3>Anfordern</h3><p>Sie schicken uns die Adresse Ihrer Website über das Formular unten.</p></li>
-        <li><h3>Prüfen</h3><p>Wir sehen uns die öffentlich sichtbaren Seiten an, mit Prüfwerkzeugen und von Hand. Keine Logins, keine Angriffe, keine Last auf Ihrem Server.</p></li>
-        <li><h3>Befund</h3><p>Sie bekommen innerhalb von <span class="ph">[5]</span> Werktagen einen kurzen schriftlichen Befund per E-Mail, mit Ampel-Bewertung je Bereich.</p></li>
-        <li><h3>Entscheiden</h3><p>Wenn Sie möchten, besprechen wir den Befund in einem kurzen Gespräch. Wenn nicht, ist der Check damit abgeschlossen.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="pakete" aria-labelledby="h-pakete">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Wenn Sie danach handeln möchten</p>
-        <h2 id="h-pakete">Drei Pakete, die aufeinander aufbauen</h2>
-        <p class="lead">Jedes Paket enthält alles aus dem vorigen. Ihre Inhalte, Ihre Domain und Ihr Erscheinungsbild bleiben erhalten. Der Befund zeigt, welches Paket zu Ihrer Website passt.</p>
-      </div>
-      <div class="tiers">
-        <article class="tier" aria-labelledby="h-t1">
-          <h3 id="h-t1">Essentials</h3>
-          <p class="claim">Rechtssicher und sicher</p>
-          <p class="for">Für kleine Websites, die gut funktionieren und rechtlich abgesichert sein sollen.</p>
-          <ul>
-            <li>Datenschutzerklärung passend zur Website</li>
-            <li>Cookie-Einwilligung, Schriften lokal eingebunden</li>
-            <li>Impressum und Offenlegung korrigiert</li>
-            <li>HTTPS, PHP-Prüfung und Absicherung gegen PHP2Shell</li>
-            <li>Funktionierende Datensicherung</li>
-          </ul>
-          <p class="price">Richtpreis <span class="ph">[€ 900 bis 1.900]</span>, einmalig</p>
-        </article>
-        <article class="tier" aria-labelledby="h-t2">
-          <h3 id="h-t2">Professional</h3>
-          <p class="claim">Schnell, mobil, gefunden</p>
-          <p class="for">Für Betriebe, die über ihre Website Kundschaft gewinnen.</p>
-          <ul>
-            <li>Alles aus Essentials</li>
-            <li>Volle Handy-Tauglichkeit auf Basis Ihres Designs</li>
-            <li>Ladezeiten im grünen Bereich der Core Web Vitals</li>
-            <li>Suchmaschinen-Grundlagen und Google-Unternehmensprofil</li>
-            <li>Barrierefreiheit: die wichtigsten Verbesserungen</li>
-            <li>Umstieg auf PHP 8.3 oder neuer</li>
-          </ul>
-          <p class="price">Richtpreis <span class="ph">[€ 2.900 bis 5.900]</span>, einmalig</p>
-        </article>
-        <article class="tier" aria-labelledby="h-t3">
-          <h3 id="h-t3">Complete</h3>
-          <p class="claim">Fit für 2030</p>
-          <p class="for">Für Shops nach dem Barrierefreiheitsgesetz und Websites auf einem veralteten CMS.</p>
-          <ul>
-            <li>Alles aus Professional</li>
-            <li>Umzug auf ein aktuelles System, ohne Ranking-Verlust</li>
-            <li>Volle Prüfung nach WCAG 2.1 AA mit Behebung</li>
-            <li>Auffrischung des Designs im bestehenden Markenbild</li>
-            <li>Inhalte vorbereitet für KI-Suchantworten</li>
-          </ul>
-          <p class="price">Richtpreis <span class="ph">[€ 6.900 bis 14.900]</span>, einmalig</p>
-        </article>
-      </div>
-      <p class="note">Alle Preise zuzüglich <span class="ph">[20 % USt.]</span>. Das konkrete Angebot richtet sich nach dem Befund. Laufende Betreuung ist als monatlicher Wartungsvertrag möglich.</p>
-    </div>
-  </section>
-
-  <section id="anfordern" aria-labelledby="h-anfordern">
-    <div class="wrap form-wrap">
-      <div class="form-intro">
-        <p class="eyebrow">Kostenloser Check</p>
-        <h2 id="h-anfordern">Check anfordern</h2>
-        <p>Wir brauchen nur die Adresse Ihrer Website und eine E-Mail-Adresse für den Befund. Alles andere ist freiwillig.</p>
-        <p class="legal-small">Wir verwenden Ihre Angaben nur, um den Check durchzuführen und Ihnen den Befund zu schicken. Werbung per E-Mail bekommen Sie nur, wenn Sie das unten ausdrücklich ankreuzen. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-      </div>
-
-      <form class="check" id="check-form" action="anfrage.php" method="post" novalidate>
-        <input type="hidden" name="typ" value="check">
-        <div class="row">
-          <div class="field">
-            <label for="f-name">Ihr Name</label>
-            <input type="text" id="f-name" name="name" autocomplete="name" required aria-describedby="e-name">
-            <p class="error" id="e-name" hidden>Bitte geben Sie Ihren Namen an.</p>
-          </div>
-          <div class="field">
-            <label for="f-firma">Betrieb <span class="opt">(freiwillig)</span></label>
-            <input type="text" id="f-firma" name="firma" autocomplete="organization">
-          </div>
-        </div>
-        <div class="field">
-          <label for="f-email">E-Mail-Adresse für den Befund</label>
-          <input type="email" id="f-email" name="email" autocomplete="email" required aria-describedby="e-email">
-          <p class="error" id="e-email" hidden>Bitte geben Sie eine gültige E-Mail-Adresse an, zum Beispiel name@betrieb.at.</p>
-        </div>
-        <div class="field">
-          <label for="f-url">Adresse Ihrer Website</label>
-          <input type="text" id="f-url" name="website" inputmode="url" autocomplete="url" placeholder="www.ihr-betrieb.at" required aria-describedby="e-url">
-          <p class="error" id="e-url" hidden>Bitte geben Sie die Adresse Ihrer Website an, zum Beispiel www.ihr-betrieb.at.</p>
-        </div>
-        <div class="field">
-          <label for="f-tel">Telefon <span class="opt">(freiwillig)</span></label>
-          <input type="tel" id="f-tel" name="telefon" autocomplete="tel">
-        </div>
-        <div class="field">
-          <label for="f-msg">Gibt es etwas, worauf wir besonders achten sollen? <span class="opt">(freiwillig)</span></label>
-          <textarea id="f-msg" name="nachricht" rows="3"></textarea>
-        </div>
-
-        <div class="hp" aria-hidden="true">
-          <label for="f-hp">Bitte dieses Feld leer lassen</label>
-          <input type="text" id="f-hp" name="firma_url" tabindex="-1" autocomplete="off">
-        </div>
-
-        <fieldset>
-          <legend class="sr-legend">Bestätigung und Einwilligung</legend>
-          <div class="check-item">
-            <input type="checkbox" id="f-berechtigt" name="berechtigt" value="ja" required aria-describedby="e-berechtigt">
-            <label for="f-berechtigt">Ich fordere den Check für meine eigene Website oder im Auftrag des Betriebs an, dem sie gehört.</label>
-          </div>
-          <p class="error" id="e-berechtigt" hidden>Bitte bestätigen Sie, dass Sie den Check für diese Website anfordern dürfen.</p>
-          <div class="check-item">
-            <input type="checkbox" id="f-optin" name="email_einwilligung" value="ja" aria-describedby="h-optin">
-            <label for="f-optin"><span class="opt">(freiwillig)</span> Ja, ich möchte auch später Informationen zu Website-Themen und Angeboten von Webpickerl per E-Mail bekommen.</label>
-          </div>
-          <p class="hint" id="h-optin">Sie bekommen dazu eine E-Mail mit einem Bestätigungslink. Erst nach dem Klick darauf schreiben wir Ihnen. Sie können die Einwilligung jederzeit mit einem Klick in jeder E-Mail oder formlos an office@webpickerl.at widerrufen. Für den Check selbst ist das nicht nötig.</p>
-        </fieldset>
-
-        <div>
-          <button class="btn" type="submit">Kostenlosen Check anfordern</button>
-        </div>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <section aria-labelledby="h-faq">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Häufige Fragen</p>
-        <h2 id="h-faq">Was Sie vielleicht wissen möchten</h2>
-      </div>
-      <div class="faq">
-        <details>
-          <summary>Kostet der Check wirklich nichts?</summary>
-          <p>Ja. Der Check und der Befund sind kostenlos und verpflichten Sie zu nichts. Wir bieten ihn an, weil viele Betriebe erst durch den Befund sehen, was an ihrer Website zu tun ist.</p>
-        </details>
-        <details>
-          <summary>Brauchen Sie Zugangsdaten zu meiner Website?</summary>
-          <p>Nein. Wir prüfen nur, was jede Besucherin und jeder Besucher sehen kann. Wir melden uns nirgends an und testen keine Angriffe. Manche Punkte, etwa die genaue Software-Version, lassen sich von außen nicht immer erkennen. Das steht dann im Befund.</p>
-        </details>
-        <details>
-          <summary>Ist der Befund eine Rechtsberatung?</summary>
-          <p>Nein. Wir sind <span class="ph">[Webentwickler, keine Rechtsanwaltskanzlei]</span>. Der Befund zeigt technische und formale Lücken auf. Ob und wie Sie rechtlich handeln müssen, klären Sie bitte mit Ihrer Rechtsberatung oder dem Rechtsservice der Wirtschaftskammer.</p>
-        </details>
-        <details>
-          <summary>Bekomme ich danach Werbung?</summary>
-          <p>Nur, wenn Sie das im Formular ankreuzen und danach den Link in unserer Bestätigungs-E-Mail anklicken. Ohne diese Einwilligung schicken wir Ihnen nur den Befund und beantworten Ihre Rückfragen.</p>
-        </details>
-        <details>
-          <summary>Was passiert mit meinen Daten?</summary>
-          <p>Wir speichern Ihre Angaben, um den Check durchzuführen, und löschen sie <span class="ph">[6 Monate]</span> nach dem Versand des Befunds, wenn daraus kein Auftrag entsteht. Diese Seite setzt keine Cookies, verwendet keine Statistik-Werkzeuge und lädt nichts von fremden Servern.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <p>© 2026 Webpickerl · Diese Seite setzt keine Cookies und lädt keine Inhalte von Drittanbietern.</p>
-    <ul>
-      <li><a href="impressum.html">Impressum</a></li>
-      <li><a href="datenschutz.html">Datenschutz</a></li>
-      <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
-    </ul>
-  </div>
-</footer>
-
-<script src="assets/main.js" defer></script>
-</body>
+    <script src="assets/main.js" defer></script>
+  </body>
 </html>

@@ -29,6 +29,7 @@ RewriteRule ^stopp/?$ stopp.php [L,QSA]
 </IfModule>
 
 AddType font/woff2 .woff2
+AddType application/manifest+json .webmanifest
 Options -Indexes
 <Files "README.md">
   Require all denied

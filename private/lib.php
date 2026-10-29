@@ -41,6 +41,9 @@ function page_start(string $title, string $nav = ''): void
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>

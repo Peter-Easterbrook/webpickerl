@@ -18,6 +18,9 @@ TEMPLATE = """<!doctype html>
 <meta name="robots" content="noindex, follow">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>

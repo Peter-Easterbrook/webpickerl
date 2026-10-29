@@ -14,6 +14,7 @@ On this Windows machine use `python` (not `python3`); PHP is not installed local
 
 - `python tools/build_legal.py`: regenerates `impressum.html`, `datenschutz.html`, `barrierefreiheit.html` from `legal/*.html`. Run after every edit to `legal/` or to the shared header/footer template inside the script.
 - `python tools/reports_from_csv.py <mailmerge.csv>`: writes `private/reports/<CODE>.json` per letter (CSV is `;`-delimited, columns `Audit_Code`, `Befund_1..3`, optional `Befund_N_Code`, `Briefdatum`).
+- `python tools/build_icons.py`: regenerates `assets/favicon.svg`, `assets/apple-touch-icon.png`, `assets/icon-192.png`, `assets/icon-512.png`, the root `favicon.ico` and the outlined-text logos `assets/logo.svg` / `assets/logo-mono.svg` (needs Pillow, fontTools, brotli). Icon `<link>`s sit in the same three heads as the nav/footer.
 - `python tools/build_preview.py <dir>`: skeleton-less copy of `index.html` for a Claude Artifact preview.
 - Local testing (where PHP exists): `php -S localhost:8000` as a background task, then e.g. `bericht.php?code=K7QM-4XTB`. `.htaccess` rewrites (`/check/CODE`, `/stopp`) don't apply under `php -S`.
 - Find remaining placeholders: `grep -rn '\[' *.html legal/`.
