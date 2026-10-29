@@ -49,7 +49,7 @@ function page_start(string $title, string $nav = ''): void
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>{$site}</span></a>
+    <a class="brand" href="/"><img class="brand-mark" src="/assets/favicon.svg" alt="" width="32" height="32"><span>{$site}</span></a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <ul>
         <li><a href="/">Startseite</a></li>

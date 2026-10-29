@@ -30,7 +30,7 @@ TEMPLATE = """<!doctype html>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Webpickerl</a>
+    <a class="brand" href="index.html"><img class="brand-mark" src="assets/favicon.svg" alt="" width="32" height="32">Webpickerl</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <ul>
         <li><a href="index.html">Startseite</a></li>

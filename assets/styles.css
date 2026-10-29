@@ -38,7 +38,7 @@
   --bg: #f4f6f7;
   --surface: #ffffff;
   --ink: #142028;
-  --muted: #6b7e8d;
+  --muted: #4f5c73;
   --line: #d3dce0;
   --accent: #00274e;
   --accent-ink: #ffffff;
@@ -64,7 +64,7 @@
   --step-2: 1.6rem;
   --step-3: clamp(2rem, 1.4rem + 2.6vw, 3.1rem);
 
-  --text-shadow: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
+  --text-shadow: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
   --text-tracking: 1px;
 
   --radius: 6px;
@@ -76,7 +76,7 @@
     --bg: #0f171c;
     --surface: #16222a;
     --ink: #eaeffc;
-    --muted: #adb6c6;
+    --muted: #d0d5de;
     --line: #2b3b44;
     --accent: #6cc6d9;
     --accent-ink: #0b1a20;
@@ -95,7 +95,7 @@
   --bg: #0f171c;
   --surface: #16222a;
   --ink: #eaeffc;
-  --muted: #adb6c6;
+  --muted: #d0d5de;
   --line: #2b3b44;
   --accent: #6cc6d9;
   --accent-ink: #0b1a20;
@@ -223,31 +223,18 @@ p {
 .brand {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: var(--ink);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.33em;
 }
+/* Same proportions as assets/logo.svg: tile height = cap height / 0.5625 */
 .brand-mark {
-  display: inline-flex;
-  gap: 3px;
-}
-.brand-mark i {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
+  width: 1.17em;
+  height: 1.17em;
   display: block;
-}
-.brand-mark i:nth-child(1) {
-  background: var(--bad);
-}
-.brand-mark i:nth-child(2) {
-  background: var(--warn-dot);
-}
-.brand-mark i:nth-child(3) {
-  background: var(--ok);
 }
 .site-nav ul {
   list-style: none;
