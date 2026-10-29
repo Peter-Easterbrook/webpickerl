@@ -35,7 +35,7 @@
 }
 
 :root {
-  --bg: #f4f6f7;
+  --bg: #f5faff;
   --surface: #ffffff;
   --ink: #142028;
   --muted: #4f5c73;
@@ -64,8 +64,8 @@
   --step-2: 1.6rem;
   --step-3: clamp(2rem, 1.4rem + 2.6vw, 3.1rem);
 
-  --text-shadow: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
   --text-tracking: 1px;
+  --text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
 
   --radius: 6px;
   --measure: 66ch;
@@ -126,6 +126,7 @@ body {
   font-size: var(--step-0);
   font-weight: 300;
   line-height: 1.6;
+  text-shadow: var(--text-shadow);
 }
 img,
 svg {
@@ -150,7 +151,6 @@ h3 {
   line-height: 1.15;
   text-wrap: balance;
   margin: 0;
-  filter: var(--text-shadow);
 }
 h1 {
   font-size: var(--step-3);
@@ -167,7 +167,6 @@ h3 {
 }
 p {
   margin: 0;
-  filter: var(--text-shadow);
   letter-spacing: var(--text-tracking);
 }
 

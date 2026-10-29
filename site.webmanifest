@@ -4,7 +4,7 @@
   "lang": "de-AT",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#f4f6f7",
+  "background_color": "#f5faff",
   "theme_color": "#00274e",
   "icons": [
     { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
