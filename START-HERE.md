@@ -29,7 +29,7 @@
 - Letter links: `webpickerl.at/check/CODE` (the code format is `XXXX-XXXX`, A-Z and 0-9) and `webpickerl.at/stopp`. The rewrites are in `.htaccess`.
 - Reports: `python3 tools/reports_from_csv.py <mailmerge.csv>` writes `private/reports/CODE.json`. These expire 6 months after the letter date. Explanations are in `private/befunde.json`, matched to the letter's findings by the start of the sentence (F_ codes from `/mnt/project-files/upgrade-package/outreach/build_letter.py`).
 - Settings: `private/config.php`. Runtime data (requests, opt-ins with proof, block list): `private/data/`.
-- Fonts: Atkinson Hyperlegible and Bricolage Grotesque, self-hosted from npm `@fontsource` (OFL licences in `assets/fonts/`).
+- Fonts: Atkinson Hyperlegible Next (300, 300 italic, 400) and Bricolage Grotesque (400), self-hosted from npm `@fontsource` (OFL licences in `assets/fonts/`).
 - Preview for Claude: `python3 tools/build_preview.py <dir>`, then copy `assets/` and the legal pages. Render a report sample by running the PHP dev server and saving `bericht.php?code=K7QM-4XTB`.
 
 ## Working cheaply

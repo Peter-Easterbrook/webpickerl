@@ -1,0 +1,109 @@
+:root {
+  --white: #fff;
+  --ivory: #fffff0;
+  --lightgrey: #e4e8eb;
+  --grey: #6b7e8d;
+  --darkgrey: #161a1d;
+  --lightblue: #eaeffc;
+  --blue: #235ac2;
+  --darkblue: #050d1c;
+  --darkorange: #ff3d00;
+--orange: #ee5522;
+  --green: #08ff08;
+  --red: #e10600;
+  --yellow: #f6a800;
+  --terracotta: #b84221;
+--hotpink: #E31C79;
+--cherry: #CD001A;
+--lightochra: #fff8e8;
+--california-sunshine: #f6a800;
+--stardustblue: #9bc3e1;
+--lightsalmon: #FFA07A
+--salmon: #FA8072
+--darksalmon: #E9967A
+}
+
+:root {
+  --color-gray-100: #f3f4f6
+  --color-gray-200: #d0d5de;
+  --color-gray-300: #adb6c6;
+  --color-gray-400: #8a97ae;
+  --color-gray-500: #677896;
+  --color-gray-600: #4f5c73;
+  --color-gray-700: #374050;
+  --color-gray-800: #1f242d;
+  --color-gray-900: #07080a;
+
+  --color-primary-50: #fcf4f6
+  --color-primary-100: #fcf3e1;
+  --color-primary-200: #fceccd;
+  --color-primary-300: #fae1af;
+  --color-primary-400: #fbd997;
+  --color-primary-500: #ffd37c;
+  --color-primary-600: #fad07b;
+  --color-primary-700: #f8c255;
+  --color-primary-800: #f6b42f;
+  --color-primary-900: #f4a60a;
+  --color-primary-950: #f6a800;
+  --color-primary-990: #d59200;
+
+  --color-blue-100: #ebf5ff;
+  --color-blue-150: #c4e1ff;
+  --color-blue-200: #9dceff;
+  --color-blue-250: #76baff;
+  --color-blue-300: #4ea6ff;
+  --color-blue-350: #2793ff;
+  --color-blue-400: #007fff;
+  --color-blue-450: #006bd8;
+  --color-blue-500: #0058b1;
+  --color-blue-550: #004489;
+  --color-blue-600: #003162;
+  --color-blue-650: #00274e;
+  --color-blue-700: #001427;
+  --color-blue-800: #000a1d;
+  --color-blue-900: #000612;
+
+}
+
+
+background: linear-gradient(90deg, #1f242d, #323e4b, #435a6b, #54788a, #6598aa, #78b9c8, #8cdce5, #a4ffff);
+
+
+"gradients": [
+    {
+      "selectors": [".placeholder-section"],
+      "css": "repeating-conic-gradient(ivory, #e3e0cf 20deg)"
+    },
+    {
+      "selectors": [".priceCard", ".impressum", ".accContainerMobile"],
+      "css": "linear-gradient(180deg, #fffff0, #f6f6e4, #eeedd8, #e5e3cd, #dddac1, #d5d1b5, #cdc8aa)"
+    },
+    {
+      "selectors": [".section-title"],
+      "css": "linear-gradient(0deg, #3d526e, #4e6280, #5f7293, #7083a6, #8294ba, #95a6cd, #a8b8e2, #bbcaf6, #a8b8e2, #95a6cd, #8294ba, #7083a6, #5f7293, #4e6280, #3d526e)"
+    },
+    {
+      "selectors": [".section-title.light"],
+      "css": "linear-gradient(180deg, #cdc8aa, #d5d1b5, #dddac1, #e5e3cd, #eeedd8, #f6f6e4, #fffff0, #f6f6e4, #eeedd8, #e5e3cd, #dddac1, #d5d1b5, #cdc8aa)"
+    },
+    {
+      "selectors": [".accContainer"],
+      "css": "linear-gradient(180deg, #bbcaf6, #a8b8e2, #95a6cd, #8294ba, #7083a6, #5f7293, #4e6280, #3d526e)"
+    },
+    {
+      "selectors": [".wrapper::-webkit-scrollbar-thumb"],
+      "css": "linear-gradient(90deg, #3d526e, #4e6280, #5f7293, #7083a6, #8294ba, #95a6cd, #a8b8e2, #bbcaf6, #a8b8e2, #95a6cd, #8294ba, #7083a6, #5f7293, #4e6280, #3d526e)"
+    },
+    {
+      "selectors": [".about"],
+      "css": "linear-gradient(180deg, var(--color-1), var(--color-2))",
+      "variables": {
+        "--color-1": "#bbcaf6",
+        "--color-2": "#8294ba"
+      }
+    },
+    {
+      "selectors": [".contactForm", ".custom-btn"],
+      "css": "linear-gradient(0deg, #3d526e, #4e6280, #5f7293, #7083a6, #8294ba, #95a6cd, #a8b8e2, #bbcaf6)"
+    }
+  ]
