@@ -76,7 +76,7 @@ page_start('Keine Post mehr');
         <label for="s-hp">Bitte dieses Feld leer lassen</label>
         <input type="text" id="s-hp" name="firma_url" tabindex="-1" autocomplete="off">
       </div>
-      <div><button class="btn" type="submit">Keine Post mehr schicken</button></div>
+      <div class="form-actions"><button class="btn" type="submit">Keine Post mehr schicken</button></div>
     </form>
   </div>
 </section>

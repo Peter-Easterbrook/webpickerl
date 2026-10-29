@@ -122,7 +122,7 @@ page_start('Website-Check für ' . $domain, '<li><a href="#kontakt">Kontakt</a><
         <label for="k-ok"><?= h(sprintf(CONSENT_CONTACT, cfg('site_name'))) ?></label>
       </div>
       <p class="hint">Bei E-Mail schicken wir Ihnen zuerst einen Bestätigungslink. Erst nach dem Klick darauf schreiben wir Ihnen.</p>
-      <div><button class="btn" type="submit">Absenden</button></div>
+      <div class="form-actions"><button class="btn" type="submit">Absenden</button></div>
     </form>
   </div>
 </section>
