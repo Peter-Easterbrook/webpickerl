@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://webpickerl.at/sitemap.xml

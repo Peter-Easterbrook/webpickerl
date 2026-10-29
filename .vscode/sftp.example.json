@@ -1,0 +1,14 @@
+{
+  "name": "webpickerl.at (ALL-INKL)",
+  "host": "w00a89d0.kasserver.com",
+  "protocol": "ftp",
+  "secure": true,
+  "port": 21,
+  "username": "FTP-BENUTZER-AUS-KAS",
+  "remotePath": "/webpickerl.at/",
+  "uploadOnSave": false,
+  "ignore": [
+    ".git", ".gitignore", ".vscode", "tools", "legal",
+    "README.md", "START-HERE.md", "private/data"
+  ]
+}

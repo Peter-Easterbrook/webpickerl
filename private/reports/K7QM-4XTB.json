@@ -1,0 +1,21 @@
+{
+  "code": "K7QM-4XTB",
+  "domain": "weingut-muster.at",
+  "firma": "Weingut Muster",
+  "audit_datum": "21. Oktober 2026",
+  "gueltig_bis": "2027-04-28",
+  "befunde": [
+    {
+      "code": "F_HTTPS",
+      "text": "Ihre Website ist nicht durchgehend verschlüsselt (HTTPS). Browser zeigen sie daher als „Nicht sicher“ an, auch auf Seiten mit Kontaktformular."
+    },
+    {
+      "code": "F_FONTS",
+      "text": "Schriften (Google Fonts) oder Karten (Google Maps) werden direkt von Google-Servern geladen, ohne vorher zu fragen."
+    },
+    {
+      "code": "F_MOBIL",
+      "text": "Ihre Website passt sich nicht an Smartphones an. Inzwischen kommt meist mehr als die Hälfte der Besucher über das Handy."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+// Form validation and submission for the free website check.
+// No tracking, no third-party requests. Sends to the form's action URL once one is set.
+(function () {
+  var form = document.getElementById("check-form");
+  if (!form) return;
+  var status = document.getElementById("form-status");
+
+  var rules = [
+    { input: "f-name", error: "e-name", valid: function (el) { return el.value.trim().length > 1; } },
+    { input: "f-email", error: "e-email", valid: function (el) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim()); } },
+    { input: "f-url", error: "e-url", valid: function (el) { return /^(https?:\/\/)?([\w-]+\.)+[a-z]{2,}(\/\S*)?$/i.test(el.value.trim()); } },
+    { input: "f-berechtigt", error: "e-berechtigt", valid: function (el) { return el.checked; } }
+  ];
+
+  function check(rule) {
+    var el = document.getElementById(rule.input);
+    var err = document.getElementById(rule.error);
+    var ok = rule.valid(el);
+    el.setAttribute("aria-invalid", ok ? "false" : "true");
+    err.hidden = ok;
+    return ok ? null : el;
+  }
+
+  rules.forEach(function (rule) {
+    var el = document.getElementById(rule.input);
+    el.addEventListener(el.type === "checkbox" ? "change" : "blur", function () {
+      if (el.getAttribute("aria-invalid") !== null || el.value) check(rule);
+    });
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    status.textContent = "";
+    var firstInvalid = null;
+    rules.forEach(function (rule) {
+      var bad = check(rule);
+      if (bad && !firstInvalid) firstInvalid = bad;
+    });
+    if (firstInvalid) {
+      status.textContent = "Bitte prüfen Sie die markierten Felder.";
+      firstInvalid.focus();
+      return;
+    }
+    if (document.getElementById("f-hp").value) return; // honeypot filled: likely a bot
+
+    var action = form.getAttribute("action") || "";
+    if (action.indexOf("[") === 0 || action === "") {
+      status.textContent = "Vorschau: Das Formular ist noch mit keinem Server verbunden. Ihre Angaben wurden nicht gesendet.";
+      return;
+    }
+
+    var button = form.querySelector("button[type=submit]");
+    button.disabled = true;
+    fetch(action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+      .then(function (res) {
+        return res.json().then(function (data) {
+          if (!res.ok || !data.ok) throw { server: data.message };
+          form.reset();
+          status.textContent = data.message;
+        });
+      })
+      .catch(function (err) {
+        status.textContent = (err && err.server)
+          ? err.server
+          : "Das Senden ist fehlgeschlagen. Bitte versuchen Sie es in ein paar Minuten noch einmal.";
+      })
+      .then(function () { button.disabled = false; });
+  });
+})();

@@ -1,0 +1,9 @@
+# Runtime data: personal data of requesters, consent proofs, block list. Back up separately, never commit.
+private/data/*
+!private/data/.htaccess
+
+# Local upload settings may contain your FTP login
+.vscode/sftp.json
+
+.DS_Store
+Thumbs.db
