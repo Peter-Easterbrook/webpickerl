@@ -21,18 +21,14 @@ if (!$report) {
 }
 
 $lib = json_decode((string) file_get_contents(__DIR__ . '/private/befunde.json'), true);
-$tiers = [
-    'Essentials' => ['Rechtssicher und sicher', 'Datenschutzerklärung, Einwilligung, Impressum, HTTPS, PHP-Absicherung und Datensicherung, ohne Ihre Website umzubauen.'],
-    'Professional' => ['Schnell, mobil, gefunden', 'Alles aus Essentials, dazu volle Handy-Tauglichkeit, kurze Ladezeiten, Suchmaschinen-Grundlagen und aktuelle PHP-Version.'],
-    'Complete' => ['Fit für 2030', 'Alles aus Professional, dazu Umzug auf ein aktuelles System, volle Barrierefreiheit und eine Auffrischung des Designs.'],
-];
-$rank = array_flip(array_keys($tiers));
-$paket = 'Essentials';
+// The letter offers Essentials only, so the report always recommends it as the first step.
+// Findings that need a larger package are named, with the other tiers as a later option.
+$spaeter = [];
 $befunde = [];
 foreach ($report['befunde'] as $b) {
     $info = $lib[$b['code'] ?? ''] ?? null;
     $befunde[] = ['text' => $b['text'], 'info' => $info];
-    if ($info && $rank[$info['paket']] > $rank[$paket]) $paket = $info['paket'];
+    if ($info && $info['paket'] !== 'Essentials') $spaeter[] = $info['titel'];
 }
 $labels = ['bad' => 'Handeln', 'warn' => 'Verbessern', 'ok' => 'In Ordnung'];
 $site = h(cfg('site_name'));
@@ -67,8 +63,14 @@ page_start('Website-Check für ' . $domain, '<li><a href="#kontakt">Kontakt</a><
 
     <div class="recommend">
       <p class="eyebrow">Was zuerst sinnvoll wäre</p>
-      <h2>Paket <?= $paket ?>: <?= $tiers[$paket][0] ?></h2>
-      <p><?= $tiers[$paket][1] ?> <a href="/#pakete">Alle Pakete im Vergleich</a></p>
+      <h2>Paket Essentials: Rechtssicher und sicher</h2>
+      <p>Wir bringen Ihre Website auf den rechtlichen und technischen Mindeststand, ohne sie umzubauen: Datenschutzerklärung, Einwilligung für Cookies und eingebundene Dienste, Schriften auf Ihrem eigenen Server, Impressum, HTTPS, Absicherung der PHP-Version und eine funktionierende Datensicherung. Richtpreis <span class="ph">[€ 900 bis 1.900]</span>, einmalig.</p>
+<?php if ($spaeter): ?>
+      <?php $spaeter = array_unique($spaeter); ?>
+      <p><?= count($spaeter) > 1 ? 'Für die Punkte' : 'Für den Punkt' ?> „<?= h(implode('“, „', $spaeter)) ?>“ gibt es die weiterführenden Pakete Professional und Complete. Das hat Zeit und lässt sich jederzeit später ergänzen. <a href="/#pakete">Alle Pakete im Vergleich</a></p>
+<?php else: ?>
+      <p><a href="/#pakete">Alle Pakete im Vergleich</a></p>
+<?php endif; ?>
     </div>
 
     <p class="note">Dieser Bericht beruht auf einem Blick von außen. Er ist keine Rechtsberatung und keine abschließende Beurteilung. Manche Dinge, etwa die Einstellungen auf Ihrem Server, sehen wir erst mit Ihrer Erlaubnis. Ob und wie dringend etwas zu tun ist, hängt von Ihrem Betrieb ab. Rechtliche Fragen klären Sie bitte mit Ihrer Rechtsberatung oder dem Rechtsservice der Wirtschaftskammer.</p>
