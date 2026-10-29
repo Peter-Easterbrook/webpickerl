@@ -1,5 +1,7 @@
 # Webpickerl landing page: start here
 
+**Source of truth is now GitHub: https://github.com/Peter-Easterbrook/webpickerl (branch main). Edit there; /mnt/project-files/landing-page/ is a snapshot from 29 Oct.**
+
 **Read this first.** Next job: agree on prices with Peter (planned for 29 Oct 2026), then put them in `index.html` (search for `€`). Open `README.md` in this folder only when deploying.
 
 ## The position
