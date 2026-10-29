@@ -35,3 +35,5 @@ Options -Indexes
   Require all denied
 </Files>
 RedirectMatch 404 ^/(tools|legal|private)/
+# Notes and text files never belong on the web (admin.txt, CLAUDE.md, ...); robots.txt stays reachable
+RedirectMatch 404 (?i)^/(?!robots\.txt$).*\.(md|txt)$

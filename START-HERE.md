@@ -11,6 +11,18 @@
 - Impressum is filled in with Peter Easterbrook, OneStepWeb, Hornbostelgasse 5, Wien, +43 680 3123714, no UID-Nummer.
 - Preview (private): https://claude.ai/artifact/DCmCphiSJfkyYsxchFDETb (version 3, includes an example report).
 
+## Where we stopped (29 Oct 2026): test upload
+Done today: favicon and logo (`tools/build_icons.py`), header logo, lighter blue light theme, text shadow on all text, right-aligned form buttons, button and nav hover transitions. All on GitHub `main`.
+
+Upload safety, done: `admin.txt`, `CLAUDE.md`, `Colors2021.txt`, `Password@Webpickerl1.txt` and the notes are on the SFTP skip list, and `.htaccess` returns 404 for every `.md`/`.txt` except `robots.txt`. **Never upload `admin.txt`.**
+
+To do for the test upload:
+1. Open `.vscode/sftp.json` (git-ignored; it lives in `.vscode/`, not the project root) and replace `FTP-BENUTZER-AUS-KAS` with the FTP user from KAS (Tools → FTP-Zugänge). Check `host` and `remotePath` match KAS. The extension asks for the password on first connect, so don't type it into the file.
+2. Check `private/config.php` is filled in (domain, mail addresses, salt).
+3. Optional: KAS "Verzeichnisschutz" so only you can see the test site.
+4. "SFTP: Sync Local → Remote". Afterwards check that `webpickerl.at/admin.txt` and `/CLAUDE.md` return 404.
+5. Test in the browser: favicon in the tab, light/dark mode, `/check/K7QM-4XTB` (example report), `/stopp`, the request form (needs the mailboxes from job 5 below).
+
 ## Next jobs
 1. Prices: replace the three `[€ …]` placeholders in `index.html` and `[20 % USt.]` (as a Kleinunternehmer, the note may become "keine USt.").
 2. Peter confirms from his GISA extract / Gewerbeschein: postcode (assumed 1060), trade authority (assumed MBA for the 6th district), and whether he holds the IT trade licence. Edit `legal/impressum.html`, then run `python3 tools/build_legal.py`.

@@ -8,7 +8,19 @@
   "remotePath": "/webpickerl.at/",
   "uploadOnSave": false,
   "ignore": [
-    ".git", ".gitignore", ".vscode", "tools", "legal",
-    "README.md", "START-HERE.md", "private/data"
+    ".git",
+    ".gitignore",
+    ".vscode",
+    ".claude",
+    "tools",
+    "legal",
+    "private/data",
+    "README.md",
+    "START-HERE.md",
+    "CLAUDE.md",
+    "Colors2021.txt",
+    "admin.txt",
+    "Password@Webpickerl1.txt",
+    "sftp.json"
   ]
 }
