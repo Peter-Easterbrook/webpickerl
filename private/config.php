@@ -9,7 +9,8 @@ return [
     'reply_to'    => 'office@webpickerl.at',
     'phone'       => '+43 680 3123714',
     'befund_tage' => 5,                              // promised working days for the report
-    'ip_salt'     => 'CHANGE-ME-to-a-long-random-string', // used to pseudonymise IPs for rate limits
+    // used to pseudonymise IPs for rate limits; the real value lives in the git-ignored salt.php
+    'ip_salt'     => is_file(__DIR__ . '/salt.php') ? (require __DIR__ . '/salt.php') : 'CHANGE-ME-to-a-long-random-string',
     'data_dir'    => __DIR__ . '/data',
     'reports_dir' => __DIR__ . '/reports',
 ];
