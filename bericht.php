@@ -64,7 +64,7 @@ page_start('Website-Check für ' . $domain, '<li><a href="#kontakt">Kontakt</a><
     <div class="recommend">
       <p class="eyebrow">Was zuerst sinnvoll wäre</p>
       <h2>Paket Essentials: Rechtssicher und sicher</h2>
-      <p>Wir bringen Ihre Website auf den rechtlichen und technischen Mindeststand, ohne sie umzubauen: Datenschutzerklärung, Einwilligung für Cookies und eingebundene Dienste, Schriften auf Ihrem eigenen Server, Impressum, HTTPS, Absicherung der PHP-Version und eine funktionierende Datensicherung. Richtpreis <span class="ph">[€ 900 bis 1.900]</span>, einmalig.</p>
+      <p>Wir bringen Ihre Website auf den rechtlichen und technischen Mindeststand, ohne sie umzubauen: Datenschutzerklärung, Einwilligung für Cookies und eingebundene Dienste, Schriften auf Ihrem eigenen Server, Impressum, HTTPS, Absicherung der PHP-Version und eine funktionierende Datensicherung. Richtpreis ab € 600, einmalig.</p>
 <?php if ($spaeter): ?>
       <?php $spaeter = array_unique($spaeter); ?>
       <p><?= count($spaeter) > 1 ? 'Für die Punkte' : 'Für den Punkt' ?> „<?= h(implode('“, „', $spaeter)) ?>“ gibt es die weiterführenden Pakete Professional und Complete. Das hat Zeit und lässt sich jederzeit später ergänzen. <a href="/#pakete">Alle Pakete im Vergleich</a></p>

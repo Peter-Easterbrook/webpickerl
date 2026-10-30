@@ -73,7 +73,7 @@ send_mail(cfg('mail_to'), $subject, implode("\n", $lines) . ($optin ? "\n\nE-Mai
 if ($typ === 'check') {
     send_mail($email, 'Ihre Anfrage für den kostenlosen Website-Check', "Guten Tag,\n\n"
         . "danke für Ihre Anfrage. Wir prüfen die öffentlich sichtbaren Seiten von {$record['website']} und schicken Ihnen den Befund "
-        . 'innerhalb von ' . cfg('befund_tage') . " Werktagen an diese E-Mail-Adresse.\n\n"
+        . 'in der Regel innerhalb von ' . cfg('befund_tage') . " Werktagen an diese E-Mail-Adresse.\n\n"
         . "Wenn Sie diese Anfrage nicht gestellt haben, antworten Sie bitte kurz auf diese E-Mail. Wir löschen die Angaben dann.\n\n"
         . "Freundliche Grüße");
 }
