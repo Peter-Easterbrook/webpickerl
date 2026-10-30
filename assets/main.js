@@ -1,3 +1,22 @@
+// Countdown to a deadline, e.g. the end of PHP 8.2 security updates.
+// The date stays in the page as text; the countdown is an extra.
+(function () {
+  var els = document.querySelectorAll(".countdown[data-until]");
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+  Array.prototype.forEach.call(els, function (el) {
+    var p = el.getAttribute("data-until").split("-");
+    var until = new Date(+p[0], +p[1] - 1, +p[2]);
+    var days = Math.round((until - today) / 86400000);
+    if (isNaN(days)) return;
+    el.textContent = days > 1 ? "noch " + days + " Tage"
+      : days === 1 ? "noch 1 Tag"
+      : days === 0 ? "heute"
+      : "abgelaufen";
+    el.hidden = false;
+  });
+})();
+
 // Form validation and submission for the free website check.
 // No tracking, no third-party requests. Sends to the form's action URL once one is set.
 (function () {
