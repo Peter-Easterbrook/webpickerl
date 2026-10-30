@@ -74,7 +74,7 @@ function page_end(): void
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <p>© {$year} {$site} · Diese Seite setzt keine Cookies und lädt keine Inhalte von Drittanbietern.</p>
+    <p>© <span class="year">{$year}</span> {$site} · Diese Seite setzt keine Cookies und lädt keine Inhalte von Drittanbietern.</p>
     <ul>
       <li><a href="/impressum.html">Impressum</a></li>
       <li><a href="/datenschutz.html">Datenschutz</a></li>

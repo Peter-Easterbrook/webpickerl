@@ -49,7 +49,7 @@ TEMPLATE = """<!doctype html>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>© 2026 Webpickerl · Diese Seite setzt keine Cookies und lädt keine Inhalte von Drittanbietern.</p>
+    <p>© <span class="year">2026</span> Webpickerl · Diese Seite setzt keine Cookies und lädt keine Inhalte von Drittanbietern.</p>
     <ul>
       <li><a href="impressum.html"{cur_impressum}>Impressum</a></li>
       <li><a href="datenschutz.html"{cur_datenschutz}>Datenschutz</a></li>
@@ -57,6 +57,7 @@ TEMPLATE = """<!doctype html>
     </ul>
   </div>
 </footer>
+<script src="assets/main.js" defer></script>
 </body>
 </html>
 """

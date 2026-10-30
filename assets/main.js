@@ -1,3 +1,8 @@
+// Current year in the footer; the static year in the HTML is the fallback.
+Array.prototype.forEach.call(document.querySelectorAll(".year"), function (el) {
+  el.textContent = new Date().getFullYear();
+});
+
 // Countdown to a deadline, e.g. the end of PHP 8.2 security updates.
 // The date stays in the page as text; the countdown is an extra.
 (function () {
