@@ -45,8 +45,8 @@
   --accent-soft: #ebf5ff;
   --accent-hover: #004489;
   --nav-hover-bg: #c4e1ff;
-  --ok: #08ff08;
-  --warn: #ee5522;
+  --ok: #0a7a2a;
+  --warn: #c2410c;
   --warn-dot: #f6a800;
   --bad: #e10600;
   --focus: #f6a800;
@@ -156,6 +156,9 @@ h3 {
   font-family: var(--font-display);
   line-height: 1.15;
   text-wrap: balance;
+  /* long German compounds ("Datenschutzerklärung") must not overflow at 320px */
+  overflow-wrap: break-word;
+  hyphens: auto;
   margin: 0;
 }
 h1 {
@@ -421,6 +424,8 @@ main section + section {
 }
 .report .area {
   font-weight: 400;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 .report .finding {
   display: block;
@@ -666,6 +671,11 @@ main section.letter {
   margin: 0;
   color: var(--muted);
 }
+.alert dt,
+.alert dd {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
 .countdown {
   display: inline-block;
   margin-left: 0.3em;
@@ -674,7 +684,6 @@ main section.letter {
   background: var(--bad);
   color: var(--surface);
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
   text-shadow: none;
 }
 .countdown[hidden] {
@@ -941,6 +950,9 @@ fieldset {
   font-size: var(--step-1);
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+}
+.legal a {
+  overflow-wrap: anywhere;
 }
 .legal p,
 .legal ul,
