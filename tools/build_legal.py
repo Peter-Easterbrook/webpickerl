@@ -1,4 +1,4 @@
-"""Builds impressum.html, datenschutz.html and barrierefreiheit.html with the shared header and footer.
+"""Builds impressum.html, datenschutz.html, barrierefreiheit.html and faelle.html with the shared header and footer.
 Edit the text in legal/*.html (body fragments), then run: python3 tools/build_legal.py"""
 from pathlib import Path
 
@@ -7,6 +7,7 @@ PAGES = {
     "impressum": "Impressum",
     "datenschutz": "Datenschutzerklärung",
     "barrierefreiheit": "Erklärung zur Barrierefreiheit",
+    "faelle": "Fälle aus der Praxis",
 }
 
 TEMPLATE = """<!doctype html>
