@@ -5,6 +5,8 @@ declare(strict_types=1);
 const CONSENT_EMAIL = 'Ja, ich möchte auch später Informationen zu Website-Themen und Angeboten von %s per E-Mail bekommen.';
 const CONSENT_CONTACT = 'Ich bin damit einverstanden, dass %s mich zum Website-Check und zum Angebot „Website Upgrade 2026“ auf dem gewählten Weg kontaktiert. Ich kann das jederzeit widerrufen.';
 
+register_shutdown_function(fn() => purge_expired());
+
 function cfg(string $key)
 {
     static $config = null;
@@ -179,6 +181,47 @@ function normalise_code(string $code): string
 {
     $code = strtoupper(preg_replace('/[^A-Za-z0-9]/', '', $code) ?? '');
     return strlen($code) === 8 ? substr($code, 0, 4) . '-' . substr($code, 4) : '';
+}
+
+/**
+ * Deletes data whose retention period has ended (see Datenschutzerklärung, sections 4 to 6).
+ * Runs at most once a day, triggered by normal page requests, so no cron job is needed.
+ * Requests and contact wishes: 6 months. Unconfirmed opt-ins: 30 days. Reports: after gueltig_bis.
+ * Confirmed or withdrawn opt-ins and the block list are kept as proof.
+ */
+function purge_expired(): void
+{
+    $stamp = data_path('purge.stamp');
+    if (is_file($stamp) && filemtime($stamp) > time() - 86400) return;
+    touch($stamp);
+
+    $limit = date('c', strtotime('-6 months'));
+    $file = data_path('anfragen.jsonl');
+    if (is_file($file)) {
+        $fp = fopen($file, 'c+');
+        flock($fp, LOCK_EX);
+        $keep = [];
+        while (($line = fgets($fp)) !== false) {
+            $r = json_decode($line, true);
+            if (is_array($r) && ($r['zeit'] ?? '') >= $limit) $keep[] = rtrim($line, "\n") . "\n";
+        }
+        ftruncate($fp, 0);
+        rewind($fp);
+        fwrite($fp, implode('', $keep));
+        flock($fp, LOCK_UN);
+        fclose($fp);
+    }
+
+    update_json('optins.json', function (array &$d) {
+        foreach ($d as $token => $o) {
+            if (!$o['bestaetigt'] && !$o['widerrufen'] && strtotime($o['angemeldet']) < time() - 30 * 86400) unset($d[$token]);
+        }
+    });
+
+    foreach (glob(cfg('reports_dir') . '/*.json') ?: [] as $f) {
+        $r = json_decode((string) file_get_contents($f), true);
+        if (!empty($r['gueltig_bis']) && $r['gueltig_bis'] < date('Y-m-d')) @unlink($f);
+    }
 }
 
 function load_report(string $code): ?array

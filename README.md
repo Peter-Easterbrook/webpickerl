@@ -17,7 +17,7 @@ Austrian German, no cookies, no third-party requests. Static pages plus a few PH
 | `private/data/` | Created at runtime: requests, opt-ins with proof, block list, rate limits |
 | `.htaccess` | HTTPS, /check and /stopp addresses, security headers (CSP, HSTS), caching |
 
-`private/` is blocked from the web by its own `.htaccess`. Download `private/data/` regularly (it is your record of consents and objections) and keep a copy.
+`private/` is blocked from the web by its own `.htaccess`. Expired data is deleted automatically once a day (`purge_expired()` in `private/lib.php`): requests after 6 months, unconfirmed opt-ins after 30 days, reports after their expiry date. Keep anything you need for a customer in your own records, not in `private/data/`. Download `private/data/` regularly (it is your record of consents and objections) and keep a copy.
 
 ## Setup in KAS (ALL-INKL)
 1. Create the new domain, PHP 8.5 (check it is 8.5.12 or later, the PHP2Shell fix).
