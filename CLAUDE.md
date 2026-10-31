@@ -12,7 +12,7 @@ Landing page for **Webpickerl** (business: OneStepWeb), a free website check off
 
 On this Windows machine use `python` (not `python3`); PHP is not installed locally.
 
-- `python tools/build_legal.py`: regenerates `impressum.html`, `datenschutz.html`, `barrierefreiheit.html` from `legal/*.html`. Run after every edit to `legal/` or to the shared header/footer template inside the script.
+- `python tools/build_legal.py`: regenerates `impressum.html`, `datenschutz.html`, `barrierefreiheit.html`, `faelle.html` from `legal/*.html`. Run after every edit to `legal/` or to the shared header/footer template inside the script.
 - `python tools/reports_from_csv.py <mailmerge.csv>`: writes `private/reports/<CODE>.json` per letter (CSV is `;`-delimited, columns `Audit_Code`, `Befund_1..3`, optional `Befund_N_Code`, `Briefdatum`).
 - `python tools/build_icons.py`: regenerates `assets/favicon.svg`, `assets/apple-touch-icon.png`, `assets/icon-192.png`, `assets/icon-512.png`, the root `favicon.ico` and the outlined-text logos `assets/logo.svg` / `assets/logo-mono.svg` (needs Pillow, fontTools, brotli). Icon `<link>`s sit in the same three heads as the nav/footer.
 - `python tools/build_preview.py <dir>`: skeleton-less copy of `index.html` for a Claude Artifact preview.
@@ -21,7 +21,7 @@ On this Windows machine use `python` (not `python3`); PHP is not installed local
 
 ## Architecture
 
-- **Generated files**: the root `impressum.html`, `datenschutz.html`, `barrierefreiheit.html` are build output. Edit `legal/*.html` (body fragments) instead. The header/footer for these lives in the `TEMPLATE` string in `tools/build_legal.py`, and is duplicated in `index.html` and in `page_start()`/`page_end()` in `private/lib.php`, so nav/footer changes must be made in all three.
+- **Generated files**: the root `impressum.html`, `datenschutz.html`, `barrierefreiheit.html`, `faelle.html` are build output. Edit `legal/*.html` (body fragments) instead. The header/footer for these lives in the `TEMPLATE` string in `tools/build_legal.py`, and is duplicated in `index.html` and in `page_start()`/`page_end()` in `private/lib.php`, so nav/footer changes must be made in all three.
 - **PHP entry points** (`anfrage.php`, `bericht.php`, `stopp.php`, `bestaetigen.php`, `abmelden.php`) each `require private/lib.php`, which provides config access (`cfg()`), HTML escaping (`h()`), page rendering, rate limiting, JSONL/JSON storage under `private/data/`, mail sending and the consent wording constants (`CONSENT_EMAIL`, `CONSENT_CONTACT`).
 - **Letter flow**: letter prints `webpickerl.at/check/CODE` (code format `XXXX-XXXX`, A-Z0-9) → `.htaccess` rewrites to `bericht.php?code=` → loads `private/reports/CODE.json` → findings explained via `private/befunde.json` (matched by the start of the finding sentence, keyed by `F_` codes). Reports expire 6 months after the letter date (`gueltig_bis`).
 - **Forms**: `index.html` request form and the contact form on `bericht.php` both post to `anfrage.php` (`typ` = `check` | `kontakt`), with a honeypot field `firma_url`. `assets/main.js` does client-side validation. Email opt-in is double opt-in via `bestaetigen.php` (requires a button press, not just the link).
