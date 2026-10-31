@@ -42,6 +42,7 @@ Find remaining placeholders with `grep -rn '\[' *.html legal/`.
 Frontend ideas not built yet: a proof strip near the footer ("Diese Seite: Lighthouse 100 · 0 Cookies · 0 Drittanbieter · N KB", measure first), header that shrinks on scroll, `:user-invalid` form feedback with a sent animation, Popover API info bubbles for terms. Rejected: manual light/dark switch (needs browser storage), live mini-check of any URL (abuse risk).
 
 ## Parked
+- English version (parked by Peter on 31 Oct 2026). If English-speaking enquiries appear, start with a short `/en/` page (offer, tiers, contact form, "EN | DE" link, no JS), about 1 to 2 hours. A full mirror is about a day, plus legal review of the English legal pages.
 - The DMARC report address (`rua=`). Add it by editing the existing `_dmarc` record once mail is flowing.
 - Statistics or analytics: none on purpose. The page promises no cookies and no third parties.
 
